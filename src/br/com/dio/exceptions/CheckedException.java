@@ -3,14 +3,14 @@ package br.com.dio.exceptions;
 import java.io.*;
 //
 public class CheckedException {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String nomeDoArquivo = "romances-blake-crouch.txt";
         imprimirArquivoNoConsole(nomeDoArquivo);
 
         System.out.println("Apesar da exception ou não, o programa continua...");
 
     }
-    public static void imprimirArquivoNoConsole(String nomeDoArquivo){
+    public static void imprimirArquivoNoConsole(String nomeDoArquivo) throws IOException {
         File file = new File(nomeDoArquivo);
 
         BufferedReader br = new BufferedReader(new FileReader(file.getName()));
